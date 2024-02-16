@@ -158,10 +158,49 @@ function createCounter() {
 */
 
 // Arrays
+/*
 const store = [ 0, 1, 2, 3, 4, 5, 6, 7, 8 ]
 console.log(store[0])
 console.log(store[1])
 console.log(store[2])
 console.log( store.length )
+*/
+
+// Objects
+const person = {
+    "name": "Subrata Mondal",
+    "age": 23,
+    "sayHi": function () { console.log( "Hi" ) },
+    greet ()
+    {
+        console.log( "Good Morning" )
+    }
+}
+
+console.log( person.name )
+console.log( person.age )
+console.log(person.sayHi())
+person.sayHi()
+person.greet()
+
+// Create an object of person using an object literal
+const person2 = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 25,
+    // Define a method to get the full name
+    getFullName: function() {
+      return this.firstName + " " + this.lastName;
+    }
+  };
+  
+  // Access the properties of the object using dot notation
+  console.log(person2.firstName); // John
+  console.log(person2.age); // 25
+  
+  // Call the method of the object using parentheses
+  console.log(person2.getFullName()); // John Doe
+
+
 
 
