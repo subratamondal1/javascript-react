@@ -51,6 +51,7 @@ console.log(true || false)
 */
 
 // Normal Functions
+/*
 function sayHi ()
 {
     console.log("Hello")
@@ -64,3 +65,36 @@ function greet ( name )
 }
 
 greet( "Subrata Mondal" )
+*/
+
+// Passing functions as arguments
+
+function applyFunction ( func, num )
+{
+    return func(num)
+}
+
+function square ( x )
+{
+    return x * x
+}
+
+function double ( x )
+{
+    return x+x
+}
+
+console.log(applyFunction(square, 5))
+console.log( applyFunction( double, 5 ) )
+
+function printVariable ( func, name )
+{
+    return func(name)
+}
+
+function greet ( name )
+{
+    return "Hello " + name
+}
+
+console.log( printVariable( greet, "Subrata Mondal" ) )
