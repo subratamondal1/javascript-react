@@ -101,7 +101,7 @@ console.log( printVariable( greet, "Subrata Mondal" ) )
 */
 
 // Arrow Functions
-
+/*
 let sum1 = function ( a, b )
 {
     return a+b
@@ -116,3 +116,47 @@ let sum2 = ( a, b ) => {
 console.log( sum2( 1, 2 ) )
 
 console.log( sum1( 1, 2 ) === sum2( 1, 2 ) )
+*/
+
+// Closures
+
+/*
+// Define a in the Function to create a counter object
+function createCounter() {
+    // Define a private variable to store the count
+    let count = 0;
+    // Define a private function to increment the count
+    function increment() {
+      count++;
+    }
+    // Define a public function to get the current count
+    function getCount() {
+      return count;
+    }
+    // Return an object with the public function
+    return {
+      increment: increment,
+      getCount: getCount
+    };
+  }
+  
+  // Create a counter object using the createCounter function
+  let counter = createCounter();
+  
+  // Call the increment method of the counter object
+  counter.increment();
+  
+  // Call the getCount method of the counter object
+  console.log(counter.getCount()); // 1
+  
+  // Try to access the private variable count
+  console.log(counter.count); // undefined
+  
+  // Try to access the private function increment
+  console.log(counter.increment); // [Function: increment]  
+  
+*/
+
+
+
+
