@@ -68,7 +68,7 @@ greet( "Subrata Mondal" )
 */
 
 // Passing functions as arguments
-
+/*
 function applyFunction ( func, num )
 {
     return func(num)
@@ -98,3 +98,21 @@ function greet ( name )
 }
 
 console.log( printVariable( greet, "Subrata Mondal" ) )
+*/
+
+// Arrow Functions
+
+let sum1 = function ( a, b )
+{
+    return a+b
+}
+
+console.log( sum1( 1, 2 ) )
+
+let sum2 = ( a, b ) => {
+    return a + b
+}
+
+console.log( sum2( 1, 2 ) )
+
+console.log( sum1( 1, 2 ) === sum2( 1, 2 ) )
