@@ -255,10 +255,12 @@ console.log(sumAll)
 */
 
 // String Template Literal
-
+/*
 let firstName = "Subrata"
 let lastName = "Mondal"
 
 let fullName = `${ firstName } ${ lastName }`
 console.log(fullName)
+*/
+
 
