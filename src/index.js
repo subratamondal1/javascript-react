@@ -204,7 +204,7 @@ console.log(person2.getFullName()); // John Doe
 */
 
 // Array Methods
-
+/*
 const numbers = [ 11, 22, 33, 44, 55, 66, 77, 88, 99 ]
 numbers.forEach( ( number, index ) => {
     console.log(index + " -> " + number)
@@ -252,6 +252,13 @@ const sumAll = numbers2.reduce( (sum,number) =>
 }, initialValue = 0 )
 
 console.log(sumAll)
+*/
 
+// String Template Literal
 
+let firstName = "Subrata"
+let lastName = "Mondal"
+
+let fullName = `${ firstName } ${ lastName }`
+console.log(fullName)
 
