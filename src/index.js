@@ -167,6 +167,7 @@ console.log( store.length )
 */
 
 // Objects
+/*
 const person = {
     "name": "Subrata Mondal",
     "age": 23,
@@ -194,13 +195,63 @@ const person2 = {
     }
   };
   
-  // Access the properties of the object using dot notation
-  console.log(person2.firstName); // John
-  console.log(person2.age); // 25
+// Access the properties of the object using dot notation
+console.log(person2.firstName); // John
+console.log(person2.age); // 25
   
-  // Call the method of the object using parentheses
-  console.log(person2.getFullName()); // John Doe
+// Call the method of the object using parentheses
+console.log(person2.getFullName()); // John Doe
+*/
 
+// Array Methods
+
+const numbers = [ 11, 22, 33, 44, 55, 66, 77, 88, 99 ]
+numbers.forEach( ( number, index ) => {
+    console.log(index + " -> " + number)
+})
+
+const double = numbers.map( (number) =>
+{
+    return number * 2
+} )
+
+console.log( double )
+
+const even = numbers.filter( ( number ) =>
+{
+    return number % 2 === 0
+} )
+
+console.log( even )
+
+const oneEven = numbers.find( ( number ) =>
+{
+    return number % 2 === 0
+} )
+
+console.log( oneEven )
+
+const isEven = numbers.some( ( number ) =>
+{
+    return number % 2 === 0
+} )
+
+console.log( isEven )
+
+const allEven = numbers.every( ( number ) =>
+{
+    return number % 2 === 0
+} )
+
+console.log( allEven )
+
+const numbers2 = [1,2,3]
+const sumAll = numbers2.reduce( (sum,number) =>
+{
+    return sum += number
+}, initialValue = 0 )
+
+console.log(sumAll)
 
 
 
