@@ -6,7 +6,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    "Subrata Mondal"
+    <h1 className='text-red-500 text-3xl'>"Subrata Mondal"</h1>
   )
 }
 
