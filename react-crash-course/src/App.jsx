@@ -3,12 +3,13 @@ import Todo from './components/Todo'
 import Title from './components/Title';
 import Modal from './components/Modal';
 import React, { useState } from 'react';
+import Counter from './components/Counter';
 
 function App ()
 {
   // in useState we provide the default value that we want to set
   // using array destructuring we are taking the first value of useState, that is the 'state' itself
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState( false )
   return (
     <div className="App">
       <Title></Title>
@@ -38,7 +39,8 @@ function App ()
           paragraph="Apply to atleast 100 Jobs"
         ></Todo>
       </div>
-      {showModal && <Modal title="Are you sure about that buddy???"></Modal>}
+      { showModal && <Modal title="Are you sure about that buddy???"></Modal> }
+      <Counter count={0}></Counter>
     </div>
   );
 }
