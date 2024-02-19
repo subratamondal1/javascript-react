@@ -1,5 +1,5 @@
-import './Modal.css'
-function Modal ({title})
+import "./Modal.css"
+function Modal ( { title, onTodoDeleteCancel, onTodoDeleteConfirm } )
 {
   function cancel ()
   {
@@ -15,11 +15,11 @@ function Modal ({title})
       <div className="modal__buttons">
         <button
           className="btn btn__cancel"
-          onClick={cancel}
+          onClick={onTodoDeleteCancel}
         >Cancel</button>
         <button
           className="btn"
-          onClick={confirm}
+          onClick={onTodoDeleteConfirm}
         >Confirm</button>
       </div>
     </div>

@@ -1,4 +1,4 @@
-function Todo ( { title, paragraph } )
+function Todo ( { title, paragraph, onTodoDelete } )
 {
     function deleteTodo (title)
     {
@@ -8,7 +8,7 @@ function Todo ( { title, paragraph } )
         <h2 className='text-xl font-semibold'>{ title }</h2>
         <p>{ paragraph }</p>
         <button
-            onClick={() => deleteTodo(title)}
+            onClick={onTodoDelete}
             className="border-2 border-blue-700 px-4 py-2 rounded-3xl my-4"
         >Delete</button>
         </div>
