@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
+import User from "../components/User"
+import { Link } from "react-router-dom"
 
 function Home ()
 {
-    const [users, setUsers] = useState([])
+    const [users, setUsers] = useState( [] )
     async function fetchUsers ()
         {
         const { data } = await axios.get( "https://jsonplaceholder.typicode.com/users" )
@@ -16,8 +18,19 @@ function Home ()
     return (
         <div>
             {
-                users.length > 0 ? <h1 className="text-5xl font-bold text-center">{ users[0]?.name }</h1> :
-                    <h1>Loading...</h1>
+                users.map( (user) => 
+                {
+                    return (
+                        <Link to={`/users/${user?.name}`} key={user?.id}>
+                            <User
+                                id={user?.id}
+                                name={user?.name}
+                                email={user?.email}
+                                username={user?.username}
+                            ></User>
+                        </Link>
+                    )
+                })
             }
         </div>
     )
